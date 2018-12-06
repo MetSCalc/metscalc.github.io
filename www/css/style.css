@@ -1,0 +1,93 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #990000;
+    height: 40px;
+    width: 100%;
+    z-index: 1;
+}
+nav > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+nav > ul > li {
+    display: table-cell;
+}
+nav > ul > li > a{
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+nav > ul > li > a:hover {
+    color: #FFCC00;
+}
+nav > ul > li.active > a{
+    color: #FFCC00;
+    border-bottom:3px solid #FFCC00;
+}
+section{
+    min-height: 70vh;
+    position: relative;
+    margin: 0;
+    padding: 10px 0;
+    display: block;
+    z-index: 0;
+}
+#about{
+    background:#FFF5E6;
+    top: 40px;
+}
+#getcode{
+    background: #FFEBCC;
+}
+#faqs{
+    background: #FFF5E6;
+}
+#examples{
+    background: #FFEBCC;
+}
+#contribute{
+    background: #FFF5E6;
+}
+#publications{
+    background: #FFEBCC;
+    top: 40px;
+    height: auto;
+}
+h2{
+    padding: 10px;
+    margin: 0;
+    color: #CC0000;
+}
+h4 {
+    padding-left: 20px;
+    color: #CC0000;
+}
+p {
+    padding: 0 20px;
+}
+.question{
+    padding: 0 10px;
+    color: #CC0000;
+}
+.column1{
+    float: left;
+    width: 60%;
+}
+.column2{
+    float: left;
+    width: 30%;
+}
+#contribute:after{
+    content: "";
+    display: table;
+    clear: both;
+}
