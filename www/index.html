@@ -10,12 +10,14 @@
     <link href='https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic' rel='stylesheet' type='text/css'>
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/mets.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
 
     <!-- CSS -->
     <link href="css/normalize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/slicknav.css" rel="stylesheet" />
 </head>
 <body>
     <nav>
@@ -30,54 +32,95 @@
         </ul>
     </nav>
     <div id="content">
-        <section id="about"><h2>About</h2>
-            <p>Test text here</p>
-        </section>
-        <section id="getcode"><h2>Get the Code</h2>
-            <p>Test text here</p>
-        </section>
-        <section id="faqs"><h2>FAQ</h2>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">T est Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-            <h5 class="question">Test Question Here?</h5>
-            <p>Test text here</p>
-        </section>
-        <section id="examples"><h2>Examples</h2>
-            <p>Test text here</p>
-        </section>
-        <section id="contribute"><h2>How can you help?</h2>
-            <p>General info about MetsCalc. Information about calculator process</p>
-            <div class="column1">
-                <h4>Cite Us</h5>
-                <p>Please reference Clinical and Translational Science - Informatics and Technology group (CTS-IT) in any research report, journal, or publication that requires citation of authors' work. Recognition of CTS-IT resources you used to perform research is important for acquiring funding for the next generation of informatics services and our research and development activities in software development and information science.</p>
-
-                <p>At minimum, a citation should include: Clinical and Translational Science Informatics and Technology group at the University of Florida</p>
-
-                <p>Our suggested acknowledgement is (select one or more items within the braces, as appropriate): The authors acknowledge the Clinical and Translational Science Informatics and Technology group at the University of Florida for providing {Python software library, code, examples, calculator} resources that have contributed to the research results reported within this paper. URL: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20306566">http://www.ncbi.nlm.nih.gov/pubmed/20306566</a></p>
+        <section id="about">
+            <div class="title">
+                <h2>About</h2>
             </div>
-            <div class="column2">
-                <h4>Open Source</h4>
-                <p>Go to github: Link</p>
-                <br><br>
-                <h4>Collaborate</h4>
-                <p>Here's how to collaborate.</p>
+            <div class="substance">
+                <p>Test text here</p>
             </div>
         </section>
+        <section id="getcode">
+            <div class="title">
+                <h2>Get the Code</h2>
+            </div>
+            <div class="substance">
+                <p>Test text here</p>
+            </div>
+        </section>
+        <section id="faqs">
+            <div class="title">
+                <h2>FAQ</h2>
+            </div>
+            <div class="substance">
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">T est Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+                <h5 class="question">Test Question Here?</h5>
+                <p>Test text here</p>
+            </div>
+        </section>
+        <section id="examples">
+            <div class="title">
+                <h2>Examples</h2>
+            </div>
+            <div class="substance">
+                <p>Test text here</p>
+            </div>
+        </section>
+        <section id="contribute">
+            <div class="title">
+                <h2>How can you help?</h2>
+            </div>
+            <div class="substance">
+                <p>General info about MetsCalc. Information about calculator process</p>
+                <div class="column1">
+                    <h4>Cite Us</h4>
+                    <p>Please reference Clinical and Translational Science - Informatics and Technology group (CTS-IT) in any research report, journal, or publication that requires citation of authors' work. Recognition of CTS-IT resources you used to perform research is important for acquiring funding for the next generation of informatics services and our research and development activities in software development and information science.</p>
+
+                    <p>At minimum, a citation should include: Clinical and Translational Science Informatics and Technology group at the University of Florida</p>
+
+                    <p>Our suggested acknowledgement is (select one or more items within the braces, as appropriate): The authors acknowledge the Clinical and Translational Science Informatics and Technology group at the University of Florida for providing {Python software library, code, examples, calculator} resources that have contributed to the research results reported within this paper. URL: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20306566">http://www.ncbi.nlm.nih.gov/pubmed/20306566</a></p>
+                </div>
+                <div class="column2">
+                    <h4>Open Source</h4>
+                    <p>Go to github: Link</p>
+                    <br><br>
+                    <h4>Collaborate</h4>
+                    <p>Here's how to collaborate.</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </section>
+    </div>
 </body>
-<footer>
+<footer id="site-footer">
+    <div class="column1">
+        <p class="white-text">This work has been supported by the Florida Department of Health's Ed and Ethel Moore Alzheimer's Disease Research Program grant number 66315-UF, the National Institute of Aging, and the 1Florida Alzheimer's Research Center grant number P50AG047266.</p>
+    </div>
+    <div class="column2">
+        <ul>
+            <li><a class="special-link" href="mailto:ctsit@ctsi.ufl.edu?Subject=MetsCalc%20Question" target="_top">ctsit@ctsi.ufl.edu</a></li>
+            <li><a class="white-text" href="#!">Metscalc &copy; 2019</a></li>
+            <li><a class="white-text" href="#!">Version 0.0.1</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+    <div>
+        <p class="white-text">This website was designed by <a class="special-link" href="https://www.ctsi.ufl.edu/research/study-design-and-analysis/informatics-consulting/" target="blank">CTS-IT</a></p>
+    </div>
 </footer>
 </html>

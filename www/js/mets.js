@@ -41,7 +41,11 @@ $(document).ready(function(){
         // Set/remove active class
         menuItems
             .parent().removeClass("active")
-            .end().filter("[href=#"+id+"]").parent().addClass("active");
+            .find('a[href="#'+id+'"]').first().parent().addClass("active");
+            // .end().filter("[href=#"+id+"]").parent().addClass("active");
     }
     });
+});
+$(function(){
+		$('#navMenu').slicknav();
 });
