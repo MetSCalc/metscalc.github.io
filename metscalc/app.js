@@ -1874,19 +1874,19 @@ function CalculateMSS(args) {
       switch (race) {
         case RaceEthnicity.Black:
           return {
-            mets_z_bmi: -6.7982 + 0.0484 * bmi - 0.0108 * hdl + 0.0073 * sbp + 0.5278 * log(triglyceride) + 0.0281 * glucose,
+            mets_z_bmi: bmi ? -6.7982 + 0.0484 * bmi - 0.0108 * hdl + 0.0073 * sbp + 0.5278 * log(triglyceride) + 0.0281 * glucose : null,
             mets_z_wc: waist ? -7.1913 + 0.0304 * waist - 0.0095 * hdl + 0.0054 * sbp + 0.4455 * log(triglyceride) + 0.0225 * glucose : null
           };
 
         case RaceEthnicity.Hispanic:
           return {
-            mets_z_bmi: -7.1844 + 0.0333 * bmi - 0.0166 * hdl + 0.0085 * sbp + 0.8625 * log(triglyceride) + 0.0221 * glucose,
+            mets_z_bmi: bmi ? -7.1844 + 0.0333 * bmi - 0.0166 * hdl + 0.0085 * sbp + 0.8625 * log(triglyceride) + 0.0221 * glucose : null,
             mets_z_wc: waist ? -7.7641 + 0.0162 * waist - 0.0157 * hdl + 0.0084 * sbp + 0.8872 * log(triglyceride) + 0.0206 * glucose : null
           };
 
         case RaceEthnicity.White:
           return {
-            mets_z_bmi: -6.5231 + 0.0523 * bmi - 0.0138 * hdl + 0.0081 * sbp + 0.6125 * log(triglyceride) + 0.0208 * glucose,
+            mets_z_bmi: bmi ? -6.5231 + 0.0523 * bmi - 0.0138 * hdl + 0.0081 * sbp + 0.6125 * log(triglyceride) + 0.0208 * glucose : null,
             mets_z_wc: waist ? -7.2591 + 0.0254 * waist - 0.0120 * hdl + 0.0075 * sbp + 0.5800 * log(triglyceride) + 0.0203 * glucose : null
           };
       }
@@ -1897,19 +1897,19 @@ function CalculateMSS(args) {
     switch (race) {
       case RaceEthnicity.Black:
         return {
-          mets_z_bmi: -4.8134 + 0.0460 * bmi - 0.0233 * hdl + 0.0020 * sbp + 0.5983 * log(triglyceride) + 0.0166 * glucose,
+          mets_z_bmi: bmi ? -4.8134 + 0.0460 * bmi - 0.0233 * hdl + 0.0020 * sbp + 0.5983 * log(triglyceride) + 0.0166 * glucose : null,
           mets_z_wc: waist ? -7.1913 + 0.0304 * waist - 0.0095 * hdl + 0.0054 * sbp + 0.4455 * log(triglyceride) + 0.0225 * glucose : null
         };
 
       case RaceEthnicity.Hispanic:
         return {
-          mets_z_bmi: -4.8198 + 0.0355 * bmi - 0.0303 * hdl + 0.0051 * sbp + 0.7835 * log(triglyceride) + 0.0104 * glucose,
+          mets_z_bmi: bmi ? -4.8198 + 0.0355 * bmi - 0.0303 * hdl + 0.0051 * sbp + 0.7835 * log(triglyceride) + 0.0104 * glucose : null,
           mets_z_wc: waist ? -7.7641 + 0.0162 * waist - 0.0157 * hdl + 0.0084 * sbp + 0.8872 * log(triglyceride) + 0.0206 * glucose : null
         };
 
       case RaceEthnicity.White:
         return {
-          mets_z_bmi: -4.8316 + 0.0315 * bmi - 0.0272 * hdl + 0.0044 * sbp + 0.8018 * log(triglyceride) + 0.0101 * glucose,
+          mets_z_bmi: bmi ? -4.8316 + 0.0315 * bmi - 0.0272 * hdl + 0.0044 * sbp + 0.8018 * log(triglyceride) + 0.0101 * glucose : null,
           mets_z_wc: waist ? -7.2591 + 0.0254 * waist - 0.0120 * hdl + 0.0075 * sbp + 0.5800 * log(triglyceride) + 0.0203 * glucose : null
         };
     }
@@ -1921,17 +1921,17 @@ function CalculateMSS(args) {
     switch (race) {
       case RaceEthnicity.Black:
         return {
-          mets_z_bmi: -3.7145 + 0.5136 * bmiZScore - 0.0190 * hdl + 0.0131 * sbp + 0.4442 * log(triglyceride) + 0.0108 * glucose
+          mets_z_bmi: bmiZScore ? -3.7145 + 0.5136 * bmiZScore - 0.0190 * hdl + 0.0131 * sbp + 0.4442 * log(triglyceride) + 0.0108 * glucose : null
         };
 
       case RaceEthnicity.Hispanic:
         return {
-          mets_z_bmi: -4.7637 + 0.3520 * bmiZScore - 0.0263 * hdl + 0.0152 * sbp + 0.6910 * log(triglyceride) + 0.0133 * glucose
+          mets_z_bmi: bmiZScore ? -4.7637 + 0.3520 * bmiZScore - 0.0263 * hdl + 0.0152 * sbp + 0.6910 * log(triglyceride) + 0.0133 * glucose : null
         };
 
       case RaceEthnicity.White:
         return {
-          mets_z_bmi: -4.3757 + 0.4849 * bmiZScore - 0.0176 * hdl + 0.0257 * sbp + 0.3172 * log(triglyceride) + 0.0083 * glucose
+          mets_z_bmi: bmiZScore ? -4.3757 + 0.4849 * bmiZScore - 0.0176 * hdl + 0.0257 * sbp + 0.3172 * log(triglyceride) + 0.0083 * glucose : null
         };
     }
   }
@@ -1985,8 +1985,12 @@ class Calculator extends React.Component {
       triglyceride: '',
       glucose: '',
       waist: '',
+      waistUnit: 'cm',
       weight: '',
+      weightUnit: 'kg',
       height: '',
+      heightUnit: 'cm',
+      bmiadult: '',
       bmiz: '',
       birth: '',
       appointment: moment().format(moment.HTML5_FMT.DATE),
@@ -2005,28 +2009,21 @@ class Calculator extends React.Component {
       sex,
       race,
       weight,
+      weightUnit,
       height,
+      heightUnit,
       hdl,
       sbp,
       triglyceride,
       glucose,
       waist,
+      waistUnit,
+      bmiadult,
       bmiz,
       birth,
       appointment,
       result
     } = this.state;
-
-    if (result) {
-      return React.createElement("div", {
-        className: "result"
-      }, React.createElement("h2", null, "Result"), result.mets_z_bmi && React.createElement("p", null, "Z-Score based on Body Mass Index", React.createElement("br", null), result.mets_z_bmi), result.mets_z_wc && React.createElement("p", null, "Z-Score based on Waistline", React.createElement("br", null), result.mets_z_wc), React.createElement("button", {
-        onClick: this.handleBack,
-        className: "btn btn-primary"
-      }, "Back"));
-    }
-
-    const adult = age && age >= 20;
     const adolescent = age && age < 20;
     return React.createElement("form", {
       onSubmit: this.handleSubmit
@@ -2034,13 +2031,13 @@ class Calculator extends React.Component {
       className: "form-group"
     }, React.createElement("label", {
       htmlFor: "birth"
-    }, "Birthdate"), React.createElement("input", {
+    }, "Birthdate ", React.createElement("em", null, "(if younger than 20 years old)")), React.createElement("input", {
       className: "form-control",
       type: "date",
       name: "birth",
       value: birth,
       onChange: this.handleChange
-    })), React.createElement("div", {
+    })), birth && React.createElement("div", {
       className: "form-group"
     }, React.createElement("label", {
       htmlFor: "appointment"
@@ -2054,7 +2051,7 @@ class Calculator extends React.Component {
       className: "form-group"
     }, React.createElement("label", {
       htmlFor: "age"
-    }, "Age (years)"), React.createElement("input", {
+    }, "Age at Appointment (years)"), React.createElement("input", {
       className: "form-control",
       name: "age",
       value: age || '',
@@ -2129,36 +2126,53 @@ class Calculator extends React.Component {
       className: "form-group"
     }, React.createElement("label", {
       htmlFor: "weight"
-    }, "Weight (kg)"), React.createElement("input", {
-      className: "form-control",
+    }, "Weight"), React.createElement(Measurement, {
       name: "weight",
-      type: "number",
-      min: "0",
-      step: "any",
       value: weight,
-      onChange: this.handleChange
+      unit: weightUnit,
+      onValueChange: this.handleChange,
+      onUnitChange: this.handleChange,
+      units: {
+        lbs: 'Pounds (lbs)',
+        kg: 'Kilograms (kg)'
+      }
     }), React.createElement("label", {
       htmlFor: "height"
-    }, "Height (cm)"), React.createElement("input", {
-      className: "form-control",
+    }, "Height"), React.createElement(Measurement, {
       name: "height",
-      type: "number",
-      min: "0",
-      step: "any",
       value: height,
-      onChange: this.handleChange
-    })), adult && React.createElement("div", {
+      unit: heightUnit,
+      onValueChange: this.handleChange,
+      onUnitChange: this.handleChange,
+      units: {
+        in: 'Inches (in)',
+        cm: 'Centimeters (cm)',
+        m: 'Meters (m)'
+      }
+    })), !adolescent && React.createElement("div", {
       className: "form-group"
     }, React.createElement("label", {
       htmlFor: "waist"
-    }, "Waistline Circumference (cm)"), React.createElement("input", {
-      className: "form-control",
+    }, "Waist Circumference ", React.createElement("em", null, "(if available)")), React.createElement(Measurement, {
       name: "waist",
-      type: "number",
-      min: "0",
-      step: "any",
       value: waist,
-      onChange: this.handleChange
+      unit: waistUnit,
+      onValueChange: this.handleChange,
+      onUnitChange: this.handleChange,
+      units: {
+        in: 'Inches (in)',
+        cm: 'Centimeters (cm)',
+        m: 'Meters (m)'
+      }
+    })), bmiadult && React.createElement("div", {
+      className: "form-group"
+    }, React.createElement("label", {
+      htmlFor: "bmiadult"
+    }, " BMI "), React.createElement("input", {
+      className: "form-control",
+      name: "bmiadult",
+      value: bmiadult,
+      readOnly: true
     })), adolescent && React.createElement("div", {
       className: "form-group"
     }, React.createElement("label", {
@@ -2170,8 +2184,15 @@ class Calculator extends React.Component {
       readOnly: true
     })), React.createElement("button", {
       type: "submit",
-      className: "btn btn-primary float-right"
-    }, "Calculate"));
+      className: "btn btn-primary float-right",
+      disabled: !(sex && race && sbp && glucose && hdl && triglyceride) || !(weight && height || waist)
+    }, "Calculate"), result && React.createElement("div", {
+      className: "result"
+    }, React.createElement("h2", null, "Results"), result.mets_z_bmi && React.createElement("p", null, "Z-Score based on Body Mass Index", React.createElement("span", {
+      className: "amount"
+    }, result.mets_z_bmi.toFixed(3))), result.mets_z_wc && React.createElement("p", null, "Z-Score based on Waistline", React.createElement("span", {
+      className: "amount"
+    }, result.mets_z_wc.toFixed(3)))));
   }
 
   handleBack(event) {
@@ -2212,6 +2233,8 @@ class Calculator extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let {
+      age,
+      bmiadult,
       sex,
       race,
       hdl,
@@ -2219,21 +2242,13 @@ class Calculator extends React.Component {
       triglyceride,
       glucose,
       waist,
+      waistUnit,
       birth,
       appointment,
-      weight,
-      height,
       bmiz
     } = this.state;
-    let bmiadult = null;
-
-    if (height && weight) {
-      const heightMeters = height / 100;
-      bmiadult = bmi.BMIAdult(weight, heightMeters);
-    }
-
     const result = msscalc.CalculateMSS({
-      age: moment(appointment).diff(moment(birth), 'years'),
+      age: age ? moment(appointment).diff(moment(birth), 'years') : 25,
       sex,
       race,
       bmi: bmiadult,
@@ -2242,7 +2257,7 @@ class Calculator extends React.Component {
       triglyceride,
       glucose,
       bmiZScore: bmiz,
-      waist
+      waist: centimeters(waist, waistUnit) || null
     });
     this.setState({
       result
@@ -2254,31 +2269,104 @@ class Calculator extends React.Component {
       birth,
       appointment,
       weight,
+      weightUnit,
       height,
+      heightUnit,
       sex
     } = this.state;
+    let age = null;
+    let bmiz = '';
+    let bmiadult = '';
 
-    if (!birth || !appointment) {
-      return;
+    if (birth && appointment) {
+      age = moment(appointment).diff(moment(birth), 'years');
     }
 
-    const age = moment(appointment).diff(moment(birth), 'years');
-    let bmiz = '';
-    const adolescent = age < 20;
+    if (height && weight) {
+      const weightKG = kilograms(weight, weightUnit);
+      const heightMeters = meters(height, heightUnit);
+      bmiadult = bmi.BMIAdult(weightKG, heightMeters);
+      const adolescent = age && age < 20;
 
-    if (adolescent && height && weight && sex) {
-      const agemos = moment(appointment).diff(moment(birth), 'months');
-      const sexord = sex === 'MALE' ? bmi.Sex.Male : bmi.Sex.Female;
-      const heightMeters = height / 100;
-      bmiz = bmi.BMIZscore(weight, heightMeters, sexord, agemos);
+      if (adolescent && sex) {
+        const agemos = moment(appointment).diff(moment(birth), 'months');
+        const sexord = sex === 'MALE' ? bmi.Sex.Male : bmi.Sex.Female;
+        bmiz = bmi.BMIZscore(weightKG, heightMeters, sexord, agemos);
+      }
     }
 
     this.setState({
       age,
-      bmiz
+      bmiz,
+      bmiadult: bmiadult
     });
   }
 
+} // meters converts the length from units into meters.
+
+
+function meters(length, units) {
+  if (isNaN(parseFloat(length))) {
+    console.error('length must be a number; got:', length);
+    return null;
+  }
+
+  switch (units) {
+    case 'm':
+      return length;
+
+    case 'cm':
+      return length / 100;
+
+    case 'in':
+      // https://www.google.com/search?q=in+to+m
+      return length / 39.37;
+  }
+
+  console.error("units must be 'm', 'cm', or 'in'; got:", units);
+  return null;
+}
+
+function centimeters(length, units) {
+  if (isNaN(parseFloat(length))) {
+    console.error('length must be a number; got:', length);
+    return null;
+  }
+
+  switch (units) {
+    case 'cm':
+      return length;
+
+    case 'm':
+      return length * 100;
+
+    case 'in':
+      // https://www.google.com/search?q=in+to+cm
+      return length * 2.54;
+  }
+
+  console.error("units must be 'm', 'cm', or 'in'; got:", units);
+  return null;
+} // kilograms converts the mass from units into kilograms.
+
+
+function kilograms(mass, units) {
+  if (isNaN(parseFloat(mass))) {
+    console.error('mass must be a number; got:', mass);
+    return null;
+  }
+
+  switch (units) {
+    case 'kg':
+      return mass;
+
+    case 'lbs':
+      // https://www.google.com/search?q=pounds+to+kg
+      return mass / 2.205;
+  }
+
+  console.error("units must be 'kg' or 'lbs'; got:", units);
+  return null;
 }
 
 function ButtonGroup(props) {
@@ -2335,6 +2423,38 @@ function Button(props) {
     value: value,
     autoComplete: "off"
   }), " ", label);
+}
+
+function Measurement(props) {
+  const {
+    name,
+    unit,
+    units,
+    value,
+    onValueChange,
+    onUnitChange
+  } = props;
+  return React.createElement("div", {
+    className: "input-group"
+  }, React.createElement("input", {
+    className: "form-control",
+    name: name,
+    type: "number",
+    min: "0",
+    step: "any",
+    value: value,
+    onChange: onValueChange
+  }), units && React.createElement("div", {
+    className: "input-group-append"
+  }, React.createElement("select", {
+    className: "custom-select",
+    value: unit,
+    name: `${name}Unit`,
+    onChange: onUnitChange
+  }, Object.keys(units).map(key => React.createElement("option", {
+    key: key,
+    value: key
+  }, units[key])))));
 }
 
 ReactDOM.render(React.createElement(Calculator, null), document.getElementById('calculator'));
