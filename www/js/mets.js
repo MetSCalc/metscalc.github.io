@@ -46,6 +46,3 @@ $(document).ready(function(){
     }
     });
 });
-$(function(){
-		$('#navMenu').slicknav();
-});

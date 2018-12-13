@@ -13,19 +13,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/mets.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
+    <script>
+     $(function(){
+		     $('#navMenu').slicknav();
+     });
+    </script>
 
     <!-- CSS -->
     <link href="css/normalize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/slicknav.css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 <body>
     <nav>
         <ul id="navMenu">
             <li class="active" ><a href="#about" >About</a></li>
-            <li><a href="metscalc.html">Go to Calculator</a></li>
+            <li><a href="metscalc.html">Calculator</a></li>
             <li><a href="publications.html">Publications</a></li>
-            <li><a href="#getcode">Get the Code</a></li>
+            <li><a href="#getcode">Code</a></li>
             <li><a href="#faqs">FAQ</a></li>
             <li><a href="#examples">Examples</a></li>
             <li><a href="#contribute">Help</a></li>
@@ -89,11 +94,7 @@
                 <p>General info about MetsCalc. Information about calculator process</p>
                 <div class="column1">
                     <h4>Cite Us</h4>
-                    <p>Please reference Clinical and Translational Science - Informatics and Technology group (CTS-IT) in any research report, journal, or publication that requires citation of authors' work. Recognition of CTS-IT resources you used to perform research is important for acquiring funding for the next generation of informatics services and our research and development activities in software development and information science.</p>
-
-                    <p>At minimum, a citation should include: Clinical and Translational Science Informatics and Technology group at the University of Florida</p>
-
-                    <p>Our suggested acknowledgement is (select one or more items within the braces, as appropriate): The authors acknowledge the Clinical and Translational Science Informatics and Technology group at the University of Florida for providing {Python software library, code, examples, calculator} resources that have contributed to the research results reported within this paper. URL: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20306566">http://www.ncbi.nlm.nih.gov/pubmed/20306566</a></p>
+                    <p>Citation guidelines here</p>
                 </div>
                 <div class="column2">
                     <h4>Open Source</h4>
@@ -109,7 +110,7 @@
 </body>
 <footer id="site-footer">
     <div class="column1">
-        <p class="white-text">This work has been supported by the Florida Department of Health's Ed and Ethel Moore Alzheimer's Disease Research Program grant number 66315-UF, the National Institute of Aging, and the 1Florida Alzheimer's Research Center grant number P50AG047266.</p>
+        <p class="white-text">This work has been supported by [Your grants here].</p>
     </div>
     <div class="column2">
         <ul>

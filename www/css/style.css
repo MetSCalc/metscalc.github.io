@@ -1,6 +1,7 @@
 /* General */
 body{
     background: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 section{
     min-height: 70vh;
@@ -128,11 +129,24 @@ nav > ul > li.active > a{
 .slicknav_menu{
     display: none;
 }
-@media screen and (max-width: 40em) {
-    .js #navMenu{
+@media screen and (max-width: 750px) {
+    nav{
         display: none;
     }
-    .js .slicknav_menu {
+    .slicknav_menu {
         display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+    .slicknav_btn {
+        background: ;
+    }
+    .slicknav_nav a {
+        color: white;
+    }
+    .slicknav_menu .slicknav_menutxt {
+        color: white;
     }
 }
