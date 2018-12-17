@@ -10,8 +10,7 @@ section{
     margin: 20px auto;
     display: block;
     z-index: 0;
-    background: #FFF5E6;
-    /* background: #FFEBCC; */
+    background: #EFEFEF;
 }
 
 /* Section Specific */
@@ -45,7 +44,7 @@ section{
 /* Footer */
 #site-footer{
     padding: 10px 20px;
-    background: #DCD0C0;
+    background: #A9A9A9;
     color: white;
 }
 #site-footer>div>ul{
@@ -56,11 +55,11 @@ section{
 h2{
     padding: 10px;
     margin: 0;
-    color: #FF1A1A;
+    color: #07889B;
 }
 h4 {
     padding-left: 20px;
-    color: #FF1A1A;
+    color: #07889B;
 }
 p {
     padding: 0 20px;
@@ -76,17 +75,17 @@ p {
 }
 .question{
     padding: 0 10px;
-    color: #FF1A1A;
+    color: #07889B;
 }
 .citation{
     font-family: monospace;
 }
 .footer-text{
-    color: #373737;
+    color: white;
     text-decoration: none;
 }
 .special-link{
-    color: #FF1A1A;
+    color: #FF3B3F;
     text-decoration: none;
 }
 
@@ -95,7 +94,7 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    background: #DCD0C0;
+    background: #A9A9A9;
     height: 40px;
     width: 100%;
     z-index: 1;
@@ -120,11 +119,11 @@ nav > ul > li > a{
     transition: all 0.3s ease-in-out;
 }
 nav > ul > li > a:hover {
-    color: #FF1A1A;
+    color: #FF3B3F;
 }
 nav > ul > li.active > a{
-    color: #FF1A1A;
-    border-bottom:3px solid #FF1A1A;
+    color: #FF3B3F;
+    border-bottom:3px solid #FF3B3F;
 }
 
 /* Mobile Menu */
