@@ -13,6 +13,35 @@ section{
     background: #EFEFEF;
 }
 
+/* Make a link look like a button. */
+.button {
+    display: block;
+    clear: both;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+    .button a {
+        padding: .5em;
+        margin: auto;
+        background: #07889B;
+        border-radius: .2em;
+        box-shadow: .1em .2em 1em #373737;
+    }
+
+    .button a,
+    .button a:visited {
+        text-decoration: none;
+        color: white
+    }
+
+    .button a:hover,
+    .button a:focus {
+        text-shadow: .1em .2em .5em #373737;
+        transition: all 300ms linear;
+    }
+
+
 /* Section Specific */
 #about{
     margin-top: 40px;
