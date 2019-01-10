@@ -81,6 +81,13 @@ p {
 .citation{
     font-family: monospace;
 }
+.clear-link{
+    color: #FF3B3F;
+    text-decoration: none;
+}
+.clear-link:hover{
+    text-decoration: underline;
+}
 .footer-text{
     color: white;
     text-decoration: none;
