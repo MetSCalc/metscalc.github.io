@@ -12,6 +12,11 @@ section{
     background: #EFEFEF;
 }
 
+a,
+a:visited {
+    color: #07889B;
+}
+
 /* Make a link look like a button. */
 .button {
     display: block;
@@ -160,6 +165,9 @@ nav > ul > li > a:hover {
 nav > ul > li.active > a{
     color: #FF3B3F;
     border-bottom:3px solid #FF3B3F;
+}
+nav > ul > li > a:visited {
+    color: white;
 }
 
 /* Mobile Menu */
