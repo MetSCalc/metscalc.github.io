@@ -1,0 +1,154 @@
+/* General */
+body{
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+section{
+    min-height: 70vh;
+    width: 100%;
+    position: relative;
+    margin: 20px auto;
+    display: block;
+    z-index: 0;
+    background: #FFF5E6;
+    /* background: #FFEBCC; */
+}
+
+/* Section Specific */
+#about{
+    margin-top: 40px;
+}
+#getcode{
+}
+#faqs{
+}
+#examples{
+}
+#contribute{
+    /* margin-bottom: 0; */
+}
+#publications{
+    margin: 40px auto;
+}
+.column1{
+    float: left;
+    width: 70%;
+}
+.column2{
+    float: left;
+    width: 30%;
+}
+.clear{
+    clear: both;
+}
+
+/* Footer */
+#site-footer{
+    padding: 10px 20px;
+    background: #DCD0C0;
+    color: white;
+}
+#site-footer>div>ul{
+    list-style: none;
+}
+
+/* Headings and Paragraphs */
+h2{
+    padding: 10px;
+    margin: 0;
+    color: #FF1A1A;
+}
+h4 {
+    padding-left: 20px;
+    color: #FF1A1A;
+}
+p {
+    padding: 0 20px;
+    color: #373737;
+}
+.title{
+    background: white;
+    padding-top: 1vh;
+    padding-left: 10.5vw;
+}
+.substance{
+    padding: 1vh 2vw;
+}
+.question{
+    padding: 0 10px;
+    color: #FF1A1A;
+}
+.citation{
+    font-family: monospace;
+}
+.footer-text{
+    color: #373737;
+    text-decoration: none;
+}
+.special-link{
+    color: #FF1A1A;
+    text-decoration: none;
+}
+
+/* Nav Menu */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #DCD0C0;
+    height: 40px;
+    width: 100%;
+    z-index: 1;
+}
+nav > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+nav > ul > li {
+    display: table-cell;
+}
+nav > ul > li > a{
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+nav > ul > li > a:hover {
+    color: #FF1A1A;
+}
+nav > ul > li.active > a{
+    color: #FF1A1A;
+    border-bottom:3px solid #FF1A1A;
+}
+
+/* Mobile Menu */
+.slicknav_menu{
+    display: none;
+}
+@media screen and (max-width: 750px) {
+    nav{
+        display: none;
+    }
+    .slicknav_menu {
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+    .slicknav_btn {
+        background: ;
+    }
+    .slicknav_nav a {
+        color: white;
+    }
+    .slicknav_menu .slicknav_menutxt {
+        color: white;
+    }
+}
