@@ -114,7 +114,8 @@ p {
 .citation{
     font-family: monospace;
 }
-.clear-link{
+.clear-link,
+.clear-link:visited{
     color: #FF3336;
     text-decoration: none;
 }
@@ -125,7 +126,8 @@ p {
     color: white;
     text-decoration: none;
 }
-.special-link{
+.special-link,
+.special-link:visited{
     color: #FF3336;
     text-decoration: none;
 }
