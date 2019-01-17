@@ -115,7 +115,7 @@ p {
     font-family: monospace;
 }
 .clear-link{
-    color: #FF3B3F;
+    color: #FF3336;
     text-decoration: none;
 }
 .clear-link:hover{
@@ -126,7 +126,7 @@ p {
     text-decoration: none;
 }
 .special-link{
-    color: #FF3B3F;
+    color: #FF3336;
     text-decoration: none;
 }
 
@@ -159,15 +159,15 @@ nav > ul > li > a{
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
-nav > ul > li > a:hover {
-    color: #FF3B3F;
-}
-nav > ul > li.active > a{
-    color: #FF3B3F;
-    border-bottom:3px solid #FF3B3F;
-}
 nav > ul > li > a:visited {
     color: white;
+}
+nav > ul > li > a:hover {
+    color: #FF3336;
+}
+nav > ul > li.active > a{
+    color: #FF3336;
+    border-bottom:3px solid #FF3336;
 }
 
 /* Mobile Menu */
