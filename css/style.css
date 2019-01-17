@@ -172,11 +172,12 @@ nav > ul > li.active > a{
     border-bottom:3px solid #FF3336;
 }
 
-/* Mobile Menu */
+/* Mobile */
 .slicknav_menu{
     display: none;
 }
 @media screen and (max-width: 750px) {
+    /* Menu */
     nav{
         display: none;
     }
@@ -186,14 +187,29 @@ nav > ul > li.active > a{
         width: 100%;
         top: 0;
         z-index: 1;
+        background: #A9A9A9;
+        text-align: right;
     }
     .slicknav_btn {
-        background: ;
+        background: #07889B;
     }
     .slicknav_nav a {
         color: white;
     }
     .slicknav_menu .slicknav_menutxt {
         color: white;
+    }
+
+    /* Columns */
+    .column1{
+        float: none;
+        width: 100%;
+    }
+    .column2{
+        float: none;
+        width: 100%;
+    }
+    .column2 > ul {
+        padding-left: 20px;
     }
 }
