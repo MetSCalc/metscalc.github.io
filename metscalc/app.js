@@ -2103,7 +2103,7 @@ class Calculator extends React.Component {
       className: "form-group"
     }, React.createElement("label", {
       htmlFor: "triglyceride"
-    }, "Trigylcerides (mg/dL)"), React.createElement("input", {
+    }, "Triglycerides (mg/dL)"), React.createElement("input", {
       className: "form-control",
       name: "triglyceride",
       type: "number",
