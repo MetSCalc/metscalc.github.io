@@ -125,6 +125,7 @@ p {
 .question{
     padding: 0 10px;
     color: #07889B;
+    font-size: 1.5em;
 }
 .citation{
     font-family: monospace;
