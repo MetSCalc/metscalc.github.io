@@ -54,6 +54,12 @@ a:visited {
     margin: 0 10vw;
     width: 70%;
 }
+.flex{
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
 .image_pc{
     flex: 0.6;
     width: 30%;
@@ -61,6 +67,9 @@ a:visited {
 }
 .image_mobile{
     display: none;
+}
+.image_static{
+    text-align: center;
 }
 .contribute_mobile{
     display: none;
@@ -159,13 +168,16 @@ p {
 #publications{
     margin: 40px auto;
 }
+#publications > .substance{
+    display: block;
+}
 
 /* Nav Menu */
 nav{
     position: fixed;
     top: 0;
     left: 0;
-    background: #A9A9A9;
+    background: black;
     height: 40px;
     width: 100%;
     z-index: 1;
@@ -215,7 +227,7 @@ nav > ul > li.active > a{
         width: 100%;
         top: 0;
         z-index: 1;
-        background: #A9A9A9;
+        background: black;
         text-align: right;
     }
     .slicknav_btn {
