@@ -1957,10 +1957,18 @@ function CalculateMSS(args) {
         mets_z_bmi: -4.931 + 0.2804 * bmiZScore - 0.0257 * hdl + 0.0189 * sbp + 0.6240 * log(triglyceride) + 0.0140 * glucose
       };
   }
+} // Percentile calculates the percentile from the specified z-score, z. This can
+// be used for both the BMI and MetS percenitles.
+// https://github.com/travm/ZMI/blob/5340e9d194cc716dd4cf9ff7b5ae479e915798a5/app/js/zmi.js +194
+
+
+function Percentile(z) {
+  return 100 * (1 / (1 + Math.exp(-0.07056 * Math.pow(z, 3) - 1.5976 * z)));
 }
 
 module.exports = {
   CalculateMSS,
+  Percentile,
   RaceEthnicity,
   Sex
 };
@@ -2174,16 +2182,16 @@ class Calculator extends React.Component {
     }, " BMI "), React.createElement("input", {
       className: "form-control",
       name: "bmiadult",
-      value: bmiadult,
+      value: bmiadult.toFixed(3),
       readOnly: true
-    })), adolescent && React.createElement("div", {
+    })), adolescent && bmiz && React.createElement("div", {
       className: "form-group"
     }, React.createElement("label", {
       htmlFor: "bmiz"
     }, " BMI Z-Score "), React.createElement("input", {
       className: "form-control",
       name: "bmiz",
-      value: bmiz,
+      value: bmiz.toFixed(3),
       readOnly: true
     })), React.createElement("button", {
       type: "submit",
@@ -2191,11 +2199,17 @@ class Calculator extends React.Component {
       disabled: !(sex && race && sbp && glucose && hdl && triglyceride) || !(weight && height || waist)
     }, "Calculate"), result && React.createElement("div", {
       className: "result"
-    }, React.createElement("h2", null, "Results"), result.mets_z_bmi && React.createElement("p", null, "Z-Score based on Body Mass Index", React.createElement("span", {
+    }, React.createElement("h2", null, "Results"), result.mets_z_bmi && React.createElement("p", null, "MetS Z-Score based on Body Mass Index", React.createElement("span", {
       className: "amount"
-    }, result.mets_z_bmi.toFixed(3))), result.mets_z_wc && React.createElement("p", null, "Z-Score based on Waistline", React.createElement("span", {
+    }, result.mets_z_bmi.toFixed(3))), result.mets_z_bmi && React.createElement("p", null, "MetS Percentile based on Body Mass Index", React.createElement("span", {
       className: "amount"
-    }, result.mets_z_wc.toFixed(3)))));
+    }, msscalc.Percentile(result.mets_z_bmi).toFixed(2), "%")), result.mets_z_wc && React.createElement("p", null, "MetS Z-Score based on Waistline", React.createElement("span", {
+      className: "amount"
+    }, result.mets_z_wc.toFixed(3))), result.mets_z_wc && React.createElement("p", null, "MetS Percentile based on Waistline", React.createElement("span", {
+      className: "amount"
+    }, msscalc.Percentile(result.mets_z_wc).toFixed(2), "%")), bmiz && React.createElement("p", null, "BMI Percentile", React.createElement("span", {
+      className: "amount"
+    }, msscalc.Percentile(bmiz).toFixed(2), "%"))));
   }
 
   handleBack(event) {
@@ -2364,8 +2378,8 @@ function kilograms(mass, units) {
       return mass;
 
     case 'lbs':
-      // https://www.google.com/search?q=pounds+to+kg
-      return mass / 2.205;
+      // See https://www.ngs.noaa.gov/PUBS_LIB/FedRegister/FRdoc59-5442.pdf
+      return mass * 0.45359237;
   }
 
   console.error("units must be 'kg' or 'lbs'; got:", units);
