@@ -45,22 +45,28 @@ a:visited {
         transition: all 300ms linear;
     }
 
-
-/* Section Specific */
-#about{
-    margin-top: 40px;
+/* Aligning */
+.substance{
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    padding: 1vh 2vw;
+    margin: 0 10vw;
 }
-#getcode{
+.image_pc{
+    flex: 0.6;
+    width: 30%;
+    margin: auto;
 }
-#faqs{
+.image_mobile{
+    display: none;
 }
-#examples{
+.contribute_mobile{
+    display: none;
 }
-#contribute{
-    /* margin-bottom: 0; */
-}
-#publications{
-    margin: 40px auto;
+.text_right{
+    flex: 1;
+    width: 60%;
 }
 .column1{
     float: left;
@@ -103,10 +109,6 @@ p {
     padding-top: 1vh;
     padding-left: 10.5vw;
 }
-.substance{
-    padding: 1vh 2vw;
-    margin: 0 8vw;
-}
 .question{
     padding: 0 10px;
     color: #07889B;
@@ -130,6 +132,37 @@ p {
 .special-link:visited{
     color: #FF3336;
     text-decoration: none;
+}
+
+/* Section Specific */
+#about{
+    margin-top: 40px;
+}
+#getcode{
+}
+#getcode > .substance > .image_pc > img {
+    height: 150px;
+}
+#faqs{
+}
+#faqs > .substance{
+    display: block;
+    padding: 1vh 2vw;
+    margin: 0 8vw;
+}
+#examples{
+}
+#examples > .substance > .image_pc{
+    flex: 0.2;
+}
+#contribute{
+    /* margin-bottom: 0; */
+}
+#contribute > .substance > .image_pc{
+    margin: 10px;
+}
+#publications{
+    margin: 40px auto;
 }
 
 /* Nav Menu */
@@ -200,7 +233,15 @@ nav > ul > li.active > a{
         color: white;
     }
 
-    /* Columns */
+    /* Aligning */
+    .substance{
+        width: 90%;
+        text-align: center;
+        margin: 0;
+    }
+    #faqs > .substance{
+        margin: 0;
+    }
     .column1{
         float: none;
         width: 100%;
@@ -211,5 +252,29 @@ nav > ul > li.active > a{
     }
     .column2 > ul {
         padding-left: 20px;
+    }
+    .contribute_mobile{
+        display: block;
+    }
+
+    /* Headings and Paragraphs */
+    h4{
+        padding: 0;
+    }
+    .title{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    /*Images*/
+    .image_pc {
+        display: none;
+    }
+    .image_mobile{
+        display: block;
+        text-align: center;
+    }
+    #getcode > .substance > div > .image_mobile > img {
+        height: 150px;
     }
 }
