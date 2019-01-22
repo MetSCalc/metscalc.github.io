@@ -52,6 +52,7 @@ a:visited {
     display: flex;
     padding: 1vh 2vw;
     margin: 0 10vw;
+    width: 70%;
 }
 .image_pc{
     flex: 0.6;
@@ -63,6 +64,9 @@ a:visited {
 }
 .contribute_mobile{
     display: none;
+}
+.text_left{
+    flex: 2;
 }
 .text_right{
     flex: 1;
@@ -138,25 +142,16 @@ p {
 #about{
     margin-top: 40px;
 }
-#getcode{
-}
 #getcode > .substance > .image_pc > img {
-    height: 150px;
-}
-#faqs{
+    max-width: 175px;
 }
 #faqs > .substance{
     display: block;
     padding: 1vh 2vw;
     margin: 0 8vw;
 }
-#examples{
-}
-#examples > .substance > .image_pc{
-    flex: 0.2;
-}
-#contribute{
-    /* margin-bottom: 0; */
+#examples > .substance{
+    width: 80%;
 }
 #contribute > .substance > .image_pc{
     margin: 10px;
@@ -241,6 +236,9 @@ nav > ul > li.active > a{
     }
     #faqs > .substance{
         margin: 0;
+    }
+    #examples > .substance{
+        width: 90%;
     }
     .column1{
         float: none;
