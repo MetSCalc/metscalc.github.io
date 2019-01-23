@@ -23,6 +23,7 @@ a:visited {
     clear: both;
     font-size: 1.6em;
     text-align: center;
+    padding-top: .5em;
 }
 
     .button a {
@@ -30,7 +31,6 @@ a:visited {
         margin: auto;
         background: #07889B;
         border-radius: .2em;
-        box-shadow: .1em .2em 1em #373737;
     }
 
     .button a,
@@ -59,6 +59,17 @@ a:visited {
     display: -webkit-flex;
     display: flex;
     width: 100%;
+}
+#credits {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+#credits > div > img {
+    max-width: 200px;
+    padding-right: 2vw;
 }
 .image_pc{
     flex: 0.6;
@@ -99,8 +110,14 @@ a:visited {
     background: #A9A9A9;
     color: white;
 }
-#site-footer>div>ul{
+#site-footer > div > ul{
     list-style: none;
+}
+#site-footer > div > ul > li{
+    padding: 4px 0;
+}
+#credits_mobile{
+    display: none;
 }
 
 /* Headings and Paragraphs */
@@ -160,10 +177,10 @@ p {
     padding: 1vh 2vw;
     margin: 0 8vw;
 }
-#examples > .substance{
+#howto > .substance{
     width: 80%;
 }
-#examples > .substance > .image_pc > img {
+#howto > .substance > .image_pc > img {
     max-width: 240px;
 }
 #contribute > .substance > .image_pc{
@@ -275,7 +292,7 @@ nav > ul > li.active > a{
     #faqs > .substance{
         margin: 0;
     }
-    #examples > .substance{
+    #howto > .substance{
         width: 90%;
     }
     .column1{
@@ -291,6 +308,9 @@ nav > ul > li.active > a{
     }
     .contribute_mobile{
         display: block;
+    }
+    footer{
+        text-align: center;
     }
 
     /* Headings and Paragraphs */
@@ -314,7 +334,19 @@ nav > ul > li.active > a{
     #getcode > .substance > div > .image_mobile > img {
         height: 150px;
     }
-    #examples > .substance > div > .image_mobile > img {
+    #howto > .substance > div > .image_mobile > img {
         height: 150px;
+    }
+    #site-footer > div > ul{
+        padding: 0;
+    }
+    #credits{
+        display: none;
+    }
+    #credits_mobile{
+        display: block;
+    }
+    #credits_mobile > p > img {
+        width: 150px;
     }
 }
