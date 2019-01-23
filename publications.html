@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <meta name="description" content="Calculate all this stuff bro.">
 
-    <!-- - <link rel="icon" href="images/favicon_tsp.png" type="image/png"> -->
+    <link rel="icon" type="image/png" href="images/red-calculator-favicon.png" />
     <link href='https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic' rel='stylesheet' type='text/css'>
 
     <!-- Scripts -->
@@ -15,7 +15,10 @@
     <script src="js/jquery.slicknav.min.js"></script>
     <script>
      $(function(){
-		     $('#navMenu').slicknav();
+             $('#navMenu').slicknav({
+                brand: '<a href="#about" id="mobile_logo"><img src="images/calc-logo-50px.png" alt="MetSCalc" title="MetSCalc" /></a>',
+                closeOnClick:true
+             });
      });
     </script>
 
@@ -26,6 +29,7 @@
 </head>
 <body>
     <nav>
+        <a href="https://metscalc.org/"><img src="images/calc-logo-50px.png" id="logo"></a>
         <ul id="navMenu">
             <li><a href="index.html" >About</a></li>
             <li><a href="metscalc">Calculator</a></li>
@@ -85,7 +89,7 @@
     <div class="column2">
         <ul>
             <li><a class="special-link" href="mailto:ctsit@ctsi.ufl.edu?Subject=MetsCalc%20Question" target="_top">ctsit@ctsi.ufl.edu</a></li>
-            <li><a class="footer-text" href="#!">Metscalc &copy; 2019</a></li>
+            <li><a class="footer-text" href="#!">MetSCalc &copy; 2019</a></li>
             <li><a class="footer-text" href="#!">Version 0.0.1</a></li>
         </ul>
     </div>
