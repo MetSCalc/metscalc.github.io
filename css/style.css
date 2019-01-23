@@ -215,6 +215,12 @@ nav > ul > li.active > a{
     color: #FF3336;
     border-bottom:3px solid #FF3336;
 }
+#logo{
+    float: left;
+    height: 35px;
+    padding-top: 2.5px;
+    padding-left: 2vw;
+}
 
 /* Mobile */
 .slicknav_menu{
@@ -227,6 +233,9 @@ nav > ul > li.active > a{
     }
     #logo{
         display: none;
+    }
+    .slicknav_brand{
+        padding: 0;
     }
     .slicknav_menu {
         display: block;
@@ -248,10 +257,20 @@ nav > ul > li.active > a{
     }
 
     /* Aligning */
+    section{
+        padding-top: 40px;
+        margin-top: -40px;
+    }
     .substance{
         width: 90%;
         text-align: center;
         margin: 0;
+    }
+    #about{
+        margin-top: 0;
+    }
+    #publications{
+        margin-top: 0;
     }
     #faqs > .substance{
         margin: 0;
