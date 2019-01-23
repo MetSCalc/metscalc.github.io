@@ -24,7 +24,8 @@ Editing the Website
 
 To edit the website, the repository https://github.com/metscalc/metscalc.github.io will need to be cloned to a computer. Once the repository is cloned a text editor can be used to adjust text and information on the website.
 
-###Cloning the website
+Cloning the website
+
 To clone this repository refer to these <a href="href=https://help.github.com/articles/cloning-a-repository">GitHub instructions</a>
 
 
