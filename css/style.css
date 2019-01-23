@@ -153,7 +153,7 @@ p {
     margin-top: 40px;
 }
 #getcode > .substance > .image_pc > img {
-    max-width: 175px;
+    max-width: 150px;
 }
 #faqs > .substance{
     display: block;
@@ -162,6 +162,9 @@ p {
 }
 #examples > .substance{
     width: 80%;
+}
+#examples > .substance > .image_pc > img {
+    max-width: 240px;
 }
 #contribute > .substance > .image_pc{
     margin: 10px;
@@ -220,6 +223,9 @@ nav > ul > li.active > a{
 @media screen and (max-width: 750px) {
     /* Menu */
     nav{
+        display: none;
+    }
+    #logo{
         display: none;
     }
     .slicknav_menu {
@@ -284,8 +290,12 @@ nav > ul > li.active > a{
     .image_mobile{
         display: block;
         text-align: center;
+        padding-top: 10px;
     }
     #getcode > .substance > div > .image_mobile > img {
+        height: 150px;
+    }
+    #examples > .substance > div > .image_mobile > img {
         height: 150px;
     }
 }
