@@ -26,7 +26,7 @@ To edit the website, the repository https://github.com/metscalc/metscalc.github.
 
 Cloning the website
 
-To clone this repository refer to these <a href="href="https://help.github.com/articles/cloning-a-repository">GitHub instructions</a>
+To clone this repository refer to these <a href=href="https://help.github.com/articles/cloning-a-repository">GitHub instructions</a>
 
 
 Attribution
