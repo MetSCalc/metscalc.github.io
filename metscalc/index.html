@@ -1,16 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Metabolic Syndrome Severity Calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="description" content="Calculate all this stuff bro.">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- - <link rel="icon" href="images/favicon_tsp.png" type="image/png"> -->
+    <link href='https://fonts.googleapis.com/css?family=Arimo%7CDidact+Gothic' rel='stylesheet' type='text/css'>
 
-  <title>Metabolic Syndrome Severity Calculator</title>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script>
+     $(function(){
+             $('#navMenu').slicknav();
+     });
+    </script>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link href="../css/normalize.css" type="text/css" rel="stylesheet" />
+    <link href="../css/slicknav.css" rel="stylesheet" />
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
 
   <!-- <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css"
         integrity="sha384-jTFzRHnGayPcZHkUx5hTuWbygQevlGFimHdpRHicjyJXGyyjcioudSScb7/YN0PE" crossorigin="anonymous"> -->
@@ -18,16 +33,27 @@
 
 </head>
 <body>
+    <nav>
+        <ul id="navMenu">
+            <li><a href="../index.html#about" >About</a></li>
+            <li class="active"><a href="#">Calculator</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../index.html#getcode">Code</a></li>
+            <li><a href="../index.html#faqs">FAQ</a></li>
+            <li><a href="../index.html#examples">Examples</a></li>
+            <li><a href="../index.html#contribute">Help</a></li>
+        </ul>
+    </nav>
 
-  <div class="container clearfix">
-    <h1 class="title">
-      Met<span class="collapsible">abolic Syndrome </span>S<span class="collapsible">everity</span> Calc<span class="collapsible">ulator</span>
-    </h1>
-    <div id="calculator"></div>
-  </div>
+    <div id="content" class="container clearfix">
+        <h1 class="metstitle">
+          Met<span class="collapsible">abolic Syndrome </span>S<span class="collapsible">everity</span> Calc<span class="collapsible">ulator</span>
+        </h1>
+
+        <div id="calculator"></div>
+    </div>
 
   <!-- Bootstrap, CAUTION: order matters! -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
