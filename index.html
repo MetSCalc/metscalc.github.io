@@ -7,6 +7,7 @@
     <meta name="description" content="Calculate all this stuff bro.">
 
     <!-- - <link rel="icon" href="images/favicon_tsp.png" type="image/png"> -->
+    <link rel="icon" type="image/png" href="images/red-calculator-favicon.png" />
     <link href='https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic' rel='stylesheet' type='text/css'>
 
     <!-- Scripts -->
@@ -15,7 +16,10 @@
     <script src="js/jquery.slicknav.min.js"></script>
     <script>
      $(function(){
-             $('#navMenu').slicknav();
+             $('#navMenu').slicknav({
+                brand: '<a href="#about" id="mobile_logo"><img src="images/calc-logo-50px.png" alt="MetSCalc" title="MetSCalc" /></a>',
+                closeOnClick:true
+             });
      });
     </script>
 
@@ -26,6 +30,7 @@
 </head>
 <body>
     <nav>
+        <a href="https://metscalc.org/"><img src="images/calc-logo-50px.png" id="logo"></a>
         <ul id="navMenu">
             <li class="active" ><a href="#about" >About</a></li>
             <li><a href="metscalc">Calculator</a></li>
@@ -81,7 +86,7 @@ online. It is written in JavaScript and the source code can be downloaded
 and modified.
                     </p>
                     <p class="button">
-                        <a href="https://github.com/metscalc/metscalc/">View Code</a>
+                        <a href="https://github.com/metscalc/metscalc/" target="_blank">View Code</a>
                     </p>
                 </div>
                 <div class="image_pc">
