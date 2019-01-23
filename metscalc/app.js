@@ -2072,6 +2072,7 @@ class Calculator extends React.Component {
       label: "Sex",
       value: sex,
       options: msscalc.Sex,
+      required: true,
       onClick: this.handleClick
     }), React.createElement(ButtonGroup, {
       name: "race",
@@ -2082,6 +2083,7 @@ class Calculator extends React.Component {
         'Non-Hispanic Black': msscalc.RaceEthnicity.Black,
         'Non-Hispanic White': msscalc.RaceEthnicity.White
       },
+      required: true,
       onClick: this.handleClick
     }), React.createElement("h3", null, "Blood pressure"), React.createElement("div", {
       className: "form-group"
@@ -2092,8 +2094,11 @@ class Calculator extends React.Component {
       name: "sbp",
       type: "number",
       min: "0",
+      max: "400",
+      required: true,
       step: "any",
       value: sbp,
+      placeholder: "Ex: 120",
       onChange: this.handleChange
     })), React.createElement("div", {
       className: "form-group"
@@ -2104,8 +2109,11 @@ class Calculator extends React.Component {
       name: "glucose",
       type: "number",
       min: "0",
+      max: "500",
       step: "any",
+      required: true,
       value: glucose,
+      placeholder: "Ex: 75",
       onChange: this.handleChange
     })), React.createElement("h3", null, "Measurements"), React.createElement("div", {
       className: "form-group"
@@ -2116,8 +2124,11 @@ class Calculator extends React.Component {
       name: "triglyceride",
       type: "number",
       min: "0",
+      max: "600",
       step: "any",
+      required: true,
       value: triglyceride,
+      placeholder: "Ex: 120",
       onChange: this.handleChange
     })), React.createElement("div", {
       className: "form-group"
@@ -2129,9 +2140,12 @@ class Calculator extends React.Component {
       className: "form-control",
       name: "hdl",
       type: "number",
+      required: true,
       min: "0",
+      max: "100",
       step: "any",
       value: hdl,
+      placeholder: "Ex: 50",
       onChange: this.handleChange
     })), React.createElement("div", {
       className: "form-group"
@@ -2141,6 +2155,9 @@ class Calculator extends React.Component {
       name: "weight",
       value: weight,
       unit: weightUnit,
+      min: "0",
+      max: "500",
+      required: true,
       onValueChange: this.handleChange,
       onUnitChange: this.handleChange,
       units: {
@@ -2153,6 +2170,9 @@ class Calculator extends React.Component {
       name: "height",
       value: height,
       unit: heightUnit,
+      min: "0",
+      max: "250",
+      required: true,
       onValueChange: this.handleChange,
       onUnitChange: this.handleChange,
       units: {
@@ -2168,6 +2188,8 @@ class Calculator extends React.Component {
       name: "waist",
       value: waist,
       unit: waistUnit,
+      min: "0",
+      max: "200",
       onValueChange: this.handleChange,
       onUnitChange: this.handleChange,
       units: {
@@ -2195,8 +2217,7 @@ class Calculator extends React.Component {
       readOnly: true
     })), React.createElement("button", {
       type: "submit",
-      className: "btn btn-primary float-right",
-      disabled: !(sex && race && sbp && glucose && hdl && triglyceride) || !(weight && height || waist)
+      className: "btn btn-primary float-right"
     }, "Calculate"), result && React.createElement("div", {
       className: "result"
     }, React.createElement("h2", null, "Results"), result.mets_z_bmi && React.createElement("p", null, "MetS Z-Score based on Body Mass Index", React.createElement("span", {
@@ -2220,9 +2241,24 @@ class Calculator extends React.Component {
   }
 
   handleChange(event) {
+    event.persist();
     this.setState({
       [event.target.name]: event.target.value
-    }, this.afterUpdate);
+    }, () => {
+      this.afterUpdate();
+
+      if (!event.target.checkValidity) {
+        return;
+      }
+
+      if (!event.target.checkValidity()) {
+        event.target.classList.add('is-invalid');
+      } else {
+        event.target.classList.remove('is-invalid');
+      }
+
+      event.target.reportValidity();
+    });
   }
 
   handleClick(event) {
@@ -2244,7 +2280,17 @@ class Calculator extends React.Component {
 
     this.setState({
       [input.name]: input.value
-    }, this.afterUpdate);
+    }, () => {
+      this.afterUpdate();
+
+      if (!input.checkValidity()) {
+        input.classList.add('is-invalid');
+      } else {
+        input.classList.remove('is-invalid');
+      }
+
+      input.reportValidity();
+    });
   }
 
   handleSubmit(event) {
@@ -2262,8 +2308,16 @@ class Calculator extends React.Component {
       waistUnit,
       birth,
       appointment,
-      bmiz
+      bmiz,
+      weight,
+      height
     } = this.state;
+
+    if (!(sex && race && sbp && glucose && hdl && triglyceride) || !(weight && height || waist)) {
+      alert('Please fill out the required fields.');
+      return;
+    }
+
     const result = msscalc.CalculateMSS({
       age: age ? moment(appointment).diff(moment(birth), 'years') : 25,
       sex,
@@ -2392,6 +2446,7 @@ function ButtonGroup(props) {
     label,
     options,
     value,
+    required,
     onClick,
     onKeyPress
   } = props;
@@ -2409,6 +2464,7 @@ function ButtonGroup(props) {
     "data-toggle": "buttons"
   }, Object.keys(options).map(label => React.createElement(Button, {
     key: label,
+    required: required,
     group: name,
     label: label,
     value: options[label],
@@ -2425,7 +2481,8 @@ function Button(props) {
     pressed,
     value,
     onClick,
-    onKeyPress
+    onKeyPress,
+    required = false
   } = props;
   return React.createElement("label", {
     className: `btn btn-light ${pressed ? 'active' : ''}`,
@@ -2438,7 +2495,8 @@ function Button(props) {
     type: "radio",
     name: group,
     value: value,
-    autoComplete: "off"
+    autoComplete: "off",
+    required: required
   }), " ", label);
 }
 
@@ -2449,7 +2507,10 @@ function Measurement(props) {
     units,
     value,
     onValueChange,
-    onUnitChange
+    onUnitChange,
+    min,
+    max,
+    required
   } = props;
   return React.createElement("div", {
     className: "input-group"
@@ -2457,7 +2518,9 @@ function Measurement(props) {
     className: "form-control",
     name: name,
     type: "number",
-    min: "0",
+    min: min,
+    max: max,
+    required: required,
     step: "any",
     value: value,
     onChange: onValueChange
