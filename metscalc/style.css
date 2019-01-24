@@ -7,7 +7,11 @@
 }
 
 nav {
-    height: unset;
+    z-index: 2;
+}
+
+nav li.active a {
+    padding-bottom: 4px;
 }
 
 h1.metstitle {
@@ -21,6 +25,10 @@ h1.metstitle {
 
 .result {
     clear: both;
+}
+
+.Measurement .input-group-append {
+    min-width: 11em;
 }
 
 .result .amount {
