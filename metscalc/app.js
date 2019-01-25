@@ -1649,7 +1649,7 @@ function (_React$Component) {
       var adolescent = age !== null && age < 20;
       return React.createElement("form", {
         onSubmit: this.handleSubmit
-      }, React.createElement("h3", null, "Age"), React.createElement("div", {
+      }, React.createElement("h3", null, "Demographics"), React.createElement("div", {
         className: "form-group"
       }, React.createElement("label", {
         htmlFor: "birth"
@@ -1680,25 +1680,82 @@ function (_React$Component) {
         type: "number",
         readOnly: true,
         value: age === null ? '' : age
-      })), React.createElement("h3", null, "Demographics"), React.createElement(ButtonGroup, {
+      })), React.createElement(ButtonGroup, {
         name: "sex",
         label: "Sex",
         value: sex,
-        options: msscalc.Sex,
         required: true,
+        options: msscalc.Sex,
         onClick: this.handleClick
       }), React.createElement(ButtonGroup, {
         name: "race",
         label: "Race and Ethnicity",
         value: race,
+        required: true,
         options: {
           'Hispanic': msscalc.RaceEthnicity.Hispanic,
           'Non-Hispanic Black': msscalc.RaceEthnicity.Black,
           'Non-Hispanic White': msscalc.RaceEthnicity.White
         },
-        required: true,
         onClick: this.handleClick
-      }), React.createElement("h3", null, "Blood pressure"), React.createElement("div", {
+      }), React.createElement("h3", null, "Measurements"), React.createElement("div", {
+        className: "form-group"
+      }, React.createElement("label", {
+        htmlFor: "height"
+      }, "Height"), React.createElement(Measurement, {
+        name: "height",
+        value: height,
+        unit: heightUnit,
+        min: "0",
+        max: "250",
+        required: true,
+        onValueChange: this.handleChange,
+        onUnitChange: this.handleChange,
+        units: {
+          cm: 'Centimeters (cm)',
+          in: 'Inches (in)'
+        }
+      })), React.createElement("label", {
+        htmlFor: "weight"
+      }, "Weight"), React.createElement(Measurement, {
+        name: "weight",
+        value: weight,
+        unit: weightUnit,
+        min: "0",
+        max: "500",
+        required: true,
+        onValueChange: this.handleChange,
+        onUnitChange: this.handleChange,
+        units: {
+          kg: 'Kilograms (kg)',
+          lbs: 'Pounds (lbs)'
+        }
+      }), !adolescent && React.createElement("div", {
+        className: "form-group"
+      }, React.createElement("label", {
+        htmlFor: "waist"
+      }, "Waist Circumference ", React.createElement("em", null, "(if available)")), React.createElement(Measurement, {
+        name: "waist",
+        value: waist,
+        unit: waistUnit,
+        min: "0",
+        max: "200",
+        onValueChange: this.handleChange,
+        onUnitChange: this.handleChange,
+        units: {
+          cm: 'Centimeters (cm)',
+          in: 'Inches (in)'
+        }
+      })), bmiadult && React.createElement("div", {
+        className: "form-group"
+      }, React.createElement("label", {
+        htmlFor: "bmiadult"
+      }, " BMI "), React.createElement("input", {
+        className: "form-control",
+        name: "bmiadult",
+        value: bmiadult.toFixed(3),
+        readOnly: true
+      })), React.createElement("div", {
         className: "form-group"
       }, React.createElement("label", {
         htmlFor: "sbp"
@@ -1713,37 +1770,7 @@ function (_React$Component) {
         value: sbp,
         placeholder: "Ex: 120",
         onChange: this.handleChange
-      })), React.createElement("div", {
-        className: "form-group"
-      }, React.createElement("label", {
-        htmlFor: "glucose"
-      }, "Fasting Glucose (mg/dL)"), React.createElement("input", {
-        className: "form-control",
-        name: "glucose",
-        type: "number",
-        min: "0",
-        max: "500",
-        step: "any",
-        required: true,
-        value: glucose,
-        placeholder: "Ex: 75",
-        onChange: this.handleChange
-      })), React.createElement("h3", null, "Measurements"), React.createElement("div", {
-        className: "form-group"
-      }, React.createElement("label", {
-        htmlFor: "triglyceride"
-      }, "Triglycerides (mg/dL)"), React.createElement("input", {
-        className: "form-control",
-        name: "triglyceride",
-        type: "number",
-        min: "0",
-        max: "600",
-        step: "any",
-        required: true,
-        value: triglyceride,
-        placeholder: "Ex: 120",
-        onChange: this.handleChange
-      })), React.createElement("div", {
+      })), React.createElement("h3", null, "Lab Values"), React.createElement("div", {
         className: "form-group"
       }, React.createElement("label", {
         htmlFor: "hdl"
@@ -1763,62 +1790,33 @@ function (_React$Component) {
       })), React.createElement("div", {
         className: "form-group"
       }, React.createElement("label", {
-        htmlFor: "weight"
-      }, "Weight"), React.createElement(Measurement, {
-        name: "weight",
-        value: weight,
-        unit: weightUnit,
+        htmlFor: "triglyceride"
+      }, "Triglycerides (mg/dL)"), React.createElement("input", {
+        className: "form-control",
+        name: "triglyceride",
+        type: "number",
+        min: "0",
+        max: "600",
+        step: "any",
+        required: true,
+        value: triglyceride,
+        placeholder: "Ex: 120",
+        onChange: this.handleChange
+      })), React.createElement("div", {
+        className: "form-group"
+      }, React.createElement("label", {
+        htmlFor: "glucose"
+      }, "Fasting Glucose (mg/dL)"), React.createElement("input", {
+        className: "form-control",
+        name: "glucose",
+        type: "number",
         min: "0",
         max: "500",
+        step: "any",
         required: true,
-        onValueChange: this.handleChange,
-        onUnitChange: this.handleChange,
-        units: {
-          lbs: 'Pounds (lbs)',
-          kg: 'Kilograms (kg)'
-        }
-      }), React.createElement("label", {
-        htmlFor: "height"
-      }, "Height"), React.createElement(Measurement, {
-        name: "height",
-        value: height,
-        unit: heightUnit,
-        min: "0",
-        max: "250",
-        required: true,
-        onValueChange: this.handleChange,
-        onUnitChange: this.handleChange,
-        units: {
-          in: 'Inches (in)',
-          cm: 'Centimeters (cm)',
-          m: 'Meters (m)'
-        }
-      })), !adolescent && React.createElement("div", {
-        className: "form-group"
-      }, React.createElement("label", {
-        htmlFor: "waist"
-      }, "Waist Circumference ", React.createElement("em", null, "(if available)")), React.createElement(Measurement, {
-        name: "waist",
-        value: waist,
-        unit: waistUnit,
-        min: "0",
-        max: "200",
-        onValueChange: this.handleChange,
-        onUnitChange: this.handleChange,
-        units: {
-          in: 'Inches (in)',
-          cm: 'Centimeters (cm)',
-          m: 'Meters (m)'
-        }
-      })), bmiadult && React.createElement("div", {
-        className: "form-group"
-      }, React.createElement("label", {
-        htmlFor: "bmiadult"
-      }, " BMI "), React.createElement("input", {
-        className: "form-control",
-        name: "bmiadult",
-        value: bmiadult.toFixed(3),
-        readOnly: true
+        value: glucose,
+        placeholder: "Ex: 75",
+        onChange: this.handleChange
       })), !result && React.createElement("button", {
         type: "submit",
         className: "btn btn-primary float-right"
