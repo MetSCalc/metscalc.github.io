@@ -16,7 +16,7 @@
     <script>
      $(function(){
              $('#navMenu').slicknav({
-                brand: '<a href="#about" id="mobile_logo"><img src="images/calc-logo-50px.png" alt="MetSCalc" title="MetSCalc" /></a>',
+                brand: '<a href="#about" id="mobile_logo"><img src="images/calc-logo-50px.png" alt="MetS Calc" title="MetS Calc" /></a>',
                 closeOnClick:true
              });
      });
@@ -29,7 +29,7 @@
 </head>
 <body>
     <nav>
-        <a href="https://metscalc.org/"><img src="images/calc-logo-50px.png" id="logo" alt="MetSCalc"></a>
+        <a href="https://metscalc.org/"><img src="images/calc-logo-50px.png" id="logo" alt="MetS Calc"></a>
         <ul id="navMenu">
             <li class="active" ><a href="#about" >About</a></li>
             <li><a href="metscalc" target="_blank">Calculator</a></li>
@@ -37,7 +37,7 @@
             <li><a href="#getcode">Code</a></li>
             <li><a href="#faqs">FAQ</a></li>
             <li><a href="#howto">Usage</a></li>
-            <li><a href="#contribute">Help</a></li>
+            <li><a href="#contribute">Donate</a></li>
         </ul>
     </nav>
     <div id="content">
@@ -59,8 +59,8 @@
 (MetS) severity calculator, is a browser-based form that calculates an individual&apos;s metabolic syndrome severity score using established and well-researched equations.
 
 MetS Calc was developed for
-Dr. Matthew J. Gurka (<a href="https://ufl.edu">University of Florida</a>) and
-Dr. Mark DeBoer (<a href="https://virginia.edu/">University of Virginia</a>) by
+Dr. Matthew J. Gurka (<a href="http://www.ufl.edu/">University of Florida</a>) and
+Dr. Mark DeBoer (<a href="http://www.virginia.edu/">University of Virginia</a>) by
 the <a href="http://ufl.to/ctsit">CTS-IT</a>.
                     </p>
                     <p class="button">
@@ -100,18 +100,8 @@ and modified.
                 <div class="image_static">
                     <img src="images/pancreas-faq.png" alt="Pancreas">
                 </div>
-                <!-- <div class="image_mobile">
-                    <img src="images/kidney-FAQ.png" alt="Kidney">
-                </div> -->
-                <div class="flex">
-                <div class="text_left">
-                    <h5 class="question">What is the metabolic syndrome?</h5>
-                    <p>There are a lot of different processes in the body that can contribute to having heart disease, such as having high cholesterol levels or high blood sugar.  These are referred to as cardiovascular risk factors.  The interesting thing about the metabolic syndrome is that five of these cardiovascular risk factors are seen together more often than would be expected by chance—as though they are caused by a similar underlying problem.  This cluster of abnormalities include abdominal obesity (seen either by a large waist circumference or a high body mass index [BMI]), high blood pressure, high triglycerides, low HDL cholesterol (the “good cholesterol”) and high fasting blood sugar.  Individuals who have at least three of these abnormalities are considered to have the metabolic syndrome or “MetS.”  These individuals have a higher risk of developing heart disease and other diseases like diabetes.</p>
-                </div>
-                <!-- <div class="image_pc">
-                    <img src="images/kidney-FAQ.png" alt="Kidney">
-                </div> -->
-                </div>
+                <h5 class="question">What is the metabolic syndrome?</h5>
+                <p>There are a lot of different processes in the body that can contribute to having heart disease, such as having high cholesterol levels or high blood sugar.  These are referred to as cardiovascular risk factors.  The interesting thing about the metabolic syndrome is that five of these cardiovascular risk factors are seen together more often than would be expected by chance—as though they are caused by a similar underlying problem.  This cluster of abnormalities include abdominal obesity (seen either by a large waist circumference or a high body mass index [BMI]), high blood pressure, high triglycerides, low HDL cholesterol (the “good cholesterol”) and high fasting blood sugar.  Individuals who have at least three of these abnormalities are considered to have the metabolic syndrome or “MetS.”  These individuals have a higher risk of developing heart disease and other diseases like diabetes.</p>
                 <h5 class="question">How is the metabolic syndrome related to other diseases?</h5>
                 <p>People with the metabolic syndrome are more likely to develop several other diseases, including higher risk for heart attack, stroke, diabetes and a liver problem called fatty liver disease.</p>
                 <h5 class="question">What is a Z-score?</h5>
@@ -126,8 +116,10 @@ and modified.
                 <p>Your score tells you where your current metabolic syndrome status is compared to others in the US population.  If your score is below zero, you have a lower degree of metabolic syndrome than the average US adult; if your score is very close to 0, then you have an average degree of metabolic syndrome.  But higher scores above 0 are associated with more risk for future disease, particularly scores above 1 (which is higher than 68% of US adults) or 2 (which is higher than 95% of US adults).  At this point we do not have detailed information on risk for CVD and diabetes based on your score, but we are working on having this.</p>
                 <h5 class="question">Can my score change over time?</h5>
                 <p>Yes, the good news is that a major influence of metabolic syndrome is lifestyle—such as food choices and exercise—and making changes in your lifestyle can lower your metabolic syndrome score.  More importantly, these decreases in score are associated with decrease in risk for future disease.  Healthy diet choices (such as reduced portion sizes and eating less saturated fat), getting regular exercise and weight loss are all important parts of lowering your risk.</p>
-                <h5 class="question">How do I use the MetSCalc?</h5>
-                <p>If you press on the “Check it out!” button above, a new window will open with fields in which to enter your clinical information for the score.  Once you have entered the information, press the “Calculate” button on the lower right corner to see your metabolic syndrome severity z-score.</p>
+                <h5 class="question">What is the advantage of the MetS score over traditional MetS definitions?</h5>
+                <p>Traditional MetS definitions are based on set cut-off values for each of the individual measurements that are part of MetS (for example, blood pressure, fasting glucose).  These include criteria suggested by the National Cholesterol Education Program, the International Diabetes Federation and the World Health Organization.  There are a few problems with the traditional MetS definitions.  The biggest is that using cut-off values to identify abnormalities means that some people with values that are just below the cut-off (for example, a triglyceride level of 148 mg/dL when the cut-off is 150 mg/dL) may be identified as completely normal, even if all five of their MetS components are just shy of these cut-offs.  While these individuals would be labeled as normal by traditional MetS definitions, they would be identified as having a slightly elevated MetS severity using a continuous MetS score like this one.  Another problem is that traditional criteria appear to not identify MetS among some individuals by race/ethnicity.  In particular, African American men are classified as having a low prevalence of MetS using traditional criteria despite having higher insulin resistance and risk for diabetes and cardiovascular mortality.  The MetS score here was formulated by sex and race/ethnicity to avoid this bias.  Finally, another problem with traditional definitions is that according to this score, you either have MetS or you don’t.  This makes it difficult to follow a person’s MetS status over time, which may remain positive, even if there is significant improvement.  By following the degree of severity in MetS, the MetS score allows doctors and patients to more easily follow for improvements in MetS over time.</p>
+                <h5 class="question">I have Type 2 diabetes.  Is this score still useful for me?</h5>
+                <p>This score has been tested among individuals with Type 2 diabetes for the ability to predict future cardiovascular disease.  Higher MetS scores continued to be associated with increased risk for cardiovascular disease, even in the setting of diabetes.  This was not just due to high blood sugars, since the analyses included assessment using a score that doesn’t use glucose and assessment for whether HbA1c values made a difference.  The MetS score remained associated with future cardiovascular disease in diabetes any way we looked at it.</p>
             </div>
         </section>
         <section id="howto">
@@ -137,31 +129,16 @@ and modified.
             <div class="substance">
                 <div class="image_pc">
                     <img src="images/liver-face-294x200.png" alt="Liver">
+                    <h4>Open Source</h4>
+                    <p>Go to github: <a href="https://github.com/metscalc/metscalc/" target="_blank">github.com/MetSCalc</a></p>
                 </div>
                 <div class="text_right">
                     <div class="image_mobile">
                         <img src="images/liver-face-294x200.png" alt="Liver">
                     </div>
-                    <h4>HTML & Javascript Implementation: MetSCalc Calculator</h4>
+                    <h4>HTML & Javascript Implementation: MetS Calc Calculator</h4>
                     <p>You can access the calculator by hitting the <a href="metscalc" target="_blank">Calculator</a> tab in the menu.</p>
-                    <p>If the participant is younger than 20 years old, enter their birth date in the form. If they are over 20 years old, leave the birthdate field blank. Provide the gender of the participant, the race and ethnicity, systolic blood pressure, fasting glucose, triglycerides, high-density lipoprotein (HDL), weight, height, and waist circumference. Make sure to select the correct unit of measurement. Once this information is provided, press the calculate button. The results of the calculation will appear at the bottom of the page.</p>
-                </div>
-            </div>
-        </section>
-        <section id="contribute">
-            <div class="title">
-                <h2>How can you help?</h2>
-            </div>
-            <div class="substance">
-                <div>
-                    <div class="image_mobile">
-                        <img src="images/intestine-face-172x200px.png" alt="Intestines">
-                    </div>
-                    <p>If you would like to contribute to the MetSCalc, we would be happy to have your help. To contribute to the code behind the calculator, please visit our <a href="https://github.com/metscalc/metscalc/" target="_blank">Github</a> page. If you would like to donate, you can find out how by clicking the button below.</p>
-                    <p class="button">
-                        <a href="https://www.uff.ufl.edu/give-now/?fund_id=003745" target="_blank">Donate</a>
-                    </p>
-                    <br>
+                    <p>If the participant is younger than 20 years old, enter their birthdate in the form. If they are over 20 years old, leave the birthdate field blank. Provide the gender of the participant, the race and ethnicity, systolic blood pressure, fasting glucose, triglycerides, high-density lipoprotein (HDL), weight, height, and waist circumference. Make sure to select the correct unit of measurement. Once this information is provided, press the calculate button. The results of the calculation will appear at the bottom of the page.</p>
                     <h4>Cite Us</h4>
                     <p>Please reference the investigators’ article(s) below as well as the Clinical and Translational Science - Informatics and Technology group (<a href="http://ufl.to/ctsit" target="_blank">CTS-IT</a>) in any research report, journal, or publication that requires citation. Recognition of CTS-IT resources you used to perform research is important for acquiring funding for the next generation of informatics services and our research and development activities in software development and information science.</p>
                     <p>If you used the child score, please cite the following article:
@@ -175,10 +152,26 @@ and modified.
                         <p>Go to GitHub: <a href="https://github.com/metscalc/metscalc/" target="_blank">github.com/MetSCalc</a></p>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="contribute">
+            <div class="title">
+                <h2>Donate to the MetS Calc</h2>
+            </div>
+            <div class="substance">
+                <div>
+                    <div class="image_mobile">
+                        <img src="images/intestine-face-172x200px.png" alt="Intestines">
+                    </div>
+                    <p>If you would like to contribute to the MetS Calc, we would be happy to have your help. You can find out how to donate by clicking the button below.</p>
+                    <p class="button">
+                        <a href="https://www.uff.ufl.edu/give-now/?fund_id=003745" target="_blank">Donate</a>
+                    </p>
+                    
+                </div>
                 <div class="image_pc">
                     <img src="images/intestine-face-172x200px.png" alt="Intestines">
-                    <h4>Open Source</h4>
-                    <p>Go to github: <a href="https://github.com/metscalc/metscalc/" target="_blank">github.com/MetSCalc</a></p>
+                    
                 </div>
             </div>
         </section>
@@ -190,7 +183,7 @@ and modified.
         <div class="column2">
             <ul>
                 <li><a class="special-link" href="mailto:ctsit@ctsi.ufl.edu?Subject=MetsCalc%20Question" target="_top">ctsit@ctsi.ufl.edu</a></li>
-                <li><a class="footer-text" href="#!">MetSCalc &copy; 2019</a></li>
+                <li><a class="footer-text" href="#!">MetS Calc &copy; 2019</a></li>
                 <li><a class="footer-text" href="#!">Version 0.0.1</a></li>
             </ul>
         </div>
