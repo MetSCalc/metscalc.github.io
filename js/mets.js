@@ -14,12 +14,16 @@ $(document).ready(function(){
     // Bind click handler to menu items
     // so we can get a fancy scroll animation
     menuItems.click(function(e){
-    var href = $(this).attr("href"),
-        offsetTop = (/^#/.test(href)) ? $(href).offset().top-topMenuHeight+1 : window.location.href=href;
-    $('html, body').stop().animate({
-        scrollTop: offsetTop
-    }, 850);
-    e.preventDefault();
+        if (e.target.target == '_blank') {
+            window.open(e.target.href)
+            return
+        }
+        var href = $(this).attr("href"),
+            offsetTop = (/^#/.test(href)) ? $(href).offset().top-topMenuHeight+1 : window.location.href=href;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 850);
+        e.preventDefault();
     });
 
     // Bind to scroll
