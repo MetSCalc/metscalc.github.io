@@ -1317,6 +1317,21 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+/*
+   Copyright 2019 University of Florida
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
 var assert = require('assert');
 
 var Sex = {
@@ -1413,6 +1428,21 @@ module.exports = {
 },{"assert":1}],8:[function(require,module,exports){
 "use strict";
 
+/*
+   Copyright 2019 University of Florida
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
 var assert = require('assert');
 
 var RaceEthnicity = {
@@ -1575,6 +1605,21 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+/*
+   Copyright 2019 University of Florida
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
 var React = window.React || require('react');
 
 var ReactDOM = window.ReactDOM || require('react-dom');
@@ -1828,7 +1873,7 @@ function (_React$Component) {
         className: "col-sm"
       }, React.createElement("p", null, "BMI Z-Score for Adolescents", React.createElement("span", {
         className: "amount"
-      }, bmiz.toFixed(3), "%")), React.createElement("p", null, "BMI Percentile for Adolescents", React.createElement("span", {
+      }, bmiz.toFixed(3))), React.createElement("p", null, "BMI Percentile for Adolescents", React.createElement("span", {
         className: "amount"
       }, msscalc.Percentile(bmiz).toFixed(2), "%"))), React.createElement("div", {
         className: "col-sm"
